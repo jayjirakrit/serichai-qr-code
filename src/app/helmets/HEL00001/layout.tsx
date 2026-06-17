@@ -5,6 +5,6 @@ export const metadata: Metadata = {
   description: "Bulletproof Vest Instruction Guidelines",
 };
 
-export default function VestsLayout({ children }: { children: React.ReactNode }) {
+export default function HelmentsLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
