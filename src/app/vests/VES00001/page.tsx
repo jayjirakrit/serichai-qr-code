@@ -10,7 +10,11 @@ import Img00323 from "@/app/vests/VES00001/_assets/ves00001-3.2-3.jpg";
 import Img00324 from "@/app/vests/VES00001/_assets/ves00001-3.2-4.jpg";
 import Img00331 from "@/app/vests/VES00001/_assets/ves00001-3.3-1.jpg";
 import Img00332 from "@/app/vests/VES00001/_assets/ves00001-3.3-2.jpg";
+import Img00333 from "@/app/vests/VES00001/_assets/ves00001-3.3-3.jpg";
+import Img00341 from "@/app/vests/VES00001/_assets/ves00001-3.4-1.jpg";
+import Img00342 from "@/app/vests/VES00001/_assets/ves00001-3.4-2.jpg";
 import Img003511 from "@/app/vests/VES00001/_assets/ves00001-3.5-1.1.jpg";
+import Img003512 from "@/app/vests/VES00001/_assets/ves00001-3.5-1.2.jpg";
 import Image from "next/image";
 import StepCard from "@/components/StepCard";
 import AdjustItem from "@/components/AdjustItem";
@@ -136,26 +140,10 @@ const Vest00001Page = () => {
           {/* 3.1 How to wear/remove */}
           <h4 className="text-xl font-semibold mt-4 mb-2 text-[#0360AE]">3.1 วิธีสวมใส่และถอด</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-            <StepCard
-              number="1"
-              desc="ถือเสื้อเกราะหันด้านหน้าเข้าหาตัว เปิดสายรัดไหล่ทั้งสองข้าง"
-              imgPlaceholder={Img00311}
-            />
-            <StepCard
-              number="2"
-              desc="สวมผ่านศีรษะ ให้แผ่นเกราะด้านหน้าอยู่บนหน้าอก"
-              imgPlaceholder={Img00312}
-            />
-            <StepCard
-              number="3"
-              desc="ปิดหัวเข็มขัดปลดเร็วที่ไหล่ให้ได้ยินเสียงคลิก"
-              imgPlaceholder={Img00313}
-            />
-            <StepCard
-              number="4"
-              desc="ปิดแถบตีนตุ๊กแกด้านข้างทั้งสองข้างให้แน่น"
-              imgPlaceholder={Img00314}
-            />
+            <StepCard number="1" desc="ถือเสื้อเกราะหันด้านหน้าเข้าหาตัว เปิดตัวปลดเร็วที่บริเวณไหล่และข้างลำตัว" imgPlaceholder={Img00311} />
+            <StepCard number="2" desc="สวมผ่านศีรษะ ให้แผ่นเกราะด้านหน้าอยู่บนหน้าอก" imgPlaceholder={Img00312} />
+            <StepCard number="3" desc="ปิดหัวเข็มขัดปลดเร็วที่ไหล่และข้างลำตัวให้ได้ยินเสียงคลิก" imgPlaceholder={Img00313} />
+            <StepCard number="4" desc="ปรับขนาดสายรัดข้างตัวให้กระชับเข้ารูป" imgPlaceholder={Img00314} />
           </div>
           <div className="p-3 rounded-lg mb-6 bg-[#EFF6FF] text-[#23425D]">
             <strong>วิธีถอด:</strong> เปิดแถบตีนตุ๊กแกด้านข้างก่อน จากนั้นเปิดหัวเข็มขัดไหล่ แล้วถอดเสื้อออกทางศีรษะ
@@ -168,68 +156,35 @@ const Vest00001Page = () => {
             desc="ดูแลไม่ให้แผ่นเกราะแข็งตกกระแทกพื้นโดยตรงอาจทำให้แผ่นเกราะแข็งเสียหายได้ โดยหันด้านที่มีตัวหนังสือบอกระดับการป้องกันออกจากตัว"
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <StepCard
-              number="1"
-              desc="เปิดแถบตีนตุ๊กแกด้านบนของช่องใส่แผ่นเกราะ"
-              imgPlaceholder={Img00321}
-            />
-            <StepCard
-              number="2"
-              desc="ใส่แผ่นเกราะแข็ง โดยหัน ด้านป้องกันกระสุน ออกจากร่างกาย"
-              imgPlaceholder={Img00322}
-            />
-            <StepCard
-              number="3"
-              desc="ใส่แผ่นเกราะอ่อนก่อน ให้ด้านที่ระบุไว้หันเข้าหาร่างกาย"
-              imgPlaceholder={Img00323}
-            />
-            <StepCard
-              number="4"
-              desc="ปิดแถบตีนตุ๊กแกให้แน่น จากนั้นทำซ้ำกับแผ่นเกราะด้านหลัง"
-              imgPlaceholder={Img00324}
-            />
+            <StepCard number="1" desc="เปิดแถบตีนตุ๊กแกด้านบนของช่องใส่แผ่นเกราะ" imgPlaceholder={Img00321} />
+            <StepCard number="2" desc="ใส่แผ่นเกราะแข็ง โดยหัน ด้านป้องกันกระสุน ออกจากร่างกาย" imgPlaceholder={Img00322} />
+            <StepCard number="3" desc="ใส่แผ่นเกราะอ่อนก่อน ให้ด้านที่ระบุไว้หันเข้าหาร่างกาย" imgPlaceholder={Img00323} />
+            <StepCard number="4" desc="ปิดแถบตีนตุ๊กแกให้แน่น จากนั้นทำซ้ำกับแผ่นเกราะด้านหลัง" imgPlaceholder={Img00324} />
           </div>
 
           {/* 3.3 Adjustment */}
           <h4 className="text-xl font-semibold mt-6 mb-2 text-[#0360AE]">3.3 วิธีปรับขนาดให้พอดีกับผู้สวมใส่</h4>
           <div className="space-y-3 mb-6">
-            <AdjustItem
-              title="ปรับระดับความสูง"
-              desc="ปรับสายรัดที่หัวขัดพลาสติกบริเวณไหล่ทั้งสองข้าง เพื่อให้แผ่นเกราะอยู่ในตำแหน่งที่ถูกต้อง"
-              img={Img00331}
-            />
-            <AdjustItem
-              title="ปรับความกระชับด้านข้าง"
-              desc="ปรับแถบตีนตุ๊กแกที่อยู่ใต้กระเป๋าใส่ซองกระสุนด้านหน้า"
-              img={Img00332}
-            />
-            <AdjustItem
-              title="ปรับสายยางยืดด้านหลัง"
-              desc="ผูกสั้นลง = กระชับขึ้น, ผูกยาวขึ้น = หลวมลง ควรปรับทั้งสองข้างให้สมดุล"
-              img=""
-            />
-            <AdjustItem
-              title="สลับด้านตัวปลดเร็วไหล่"
-              desc="ถอดออกและสลับข้างได้ตามความถนัดของผู้ใช้"
-              img=""
-            />
+            <AdjustItem title="ปรับระดับความสูง" desc="ปรับความยาวสายบ่า เพื่อให้แผ่นเกราะอยู่ในตำแหน่งที่ถูกต้อง" img={Img00331} />
+            <AdjustItem title="ปรับความกระชับด้านข้าง" desc="ปรับแถบตีนตุ๊กแกที่อยู่ใต้กระเป๋าใส่ซองกระสุนด้านหน้า" img={Img00332} />
+            <AdjustItem title="ปรับสายยางยืดด้านหลัง" desc="ผูกสั้นลง = กระชับขึ้น, ผูกยาวขึ้น = หลวมลง ควรปรับทั้งสองข้างให้สมดุล" img={Img00333} />
           </div>
 
           {/* 3.4 Position check */}
           <h4 className="text-xl font-semibold mt-6 mb-2 text-[#0360AE]">3.4 ตรวจสอบตำแหน่งก่อนใช้งาน</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <div className="border rounded-lg p-3 text-center border-[#0360AE]">
-              <div className="bg-gray-100 h-32 rounded flex items-center justify-center text-xs">
-                📐 [ภาพ: ด้านหน้า ขอบบนของแผ่นเกราะอยู่ที่แอ่งคอระหว่างไหปลาร้า]
+              <div className="relative bg-gray-100 h-48 rounded flex items-center justify-center text-xs">
+                <Image src={Img00341} alt="ภาพ: ด้านหน้า ขอบบนของแผ่นเกราะอยู่ที่แอ่งคอระหว่างไหปลาร้า" fill style={{ objectFit: "contain" }}  />
               </div>
-              <p className="mt-2 font-bold text-[#23425D]">Front Fitting</p>
+              <p className="mt-2 font-bold text-[#23425D]">ด้านหน้า</p>
               <p className="text-sm">ขอบบนของแผ่นเกราะอยู่ที่แอ่งคอระหว่างไหปลาร้า</p>
             </div>
             <div className="border rounded-lg p-3 text-center border-[#0360AE]">
-              <div className="bg-gray-100 h-32 rounded flex items-center justify-center text-xs">
-                📐 [ภาพ: ด้านหลัง แผ่นเกราะอยู่ในระดับเดียวกับด้านหน้า]
+              <div className="relative bg-gray-100 h-48 rounded flex items-center justify-center text-xs">
+                <Image src={Img00342} alt="ภาพ: ด้านหลัง แผ่นเกราะอยู่ในระดับเดียวกับด้านหน้า" fill style={{ objectFit: "contain" }}  />
               </div>
-              <p className="mt-2 font-bold text-[#23425D]">Rear Fitting</p>
+              <p className="mt-2 font-bold text-[#23425D]">ด้านข้าง</p>
               <p className="text-sm">ระดับเดียวกับแผ่นเกราะด้านหน้า ครอบคลุมกระดูกสันหลัง</p>
             </div>
           </div>
@@ -237,7 +192,7 @@ const Vest00001Page = () => {
             <p className="font-bold">✅ ก่อนใช้งาน ตรวจสอบให้ครบ:</p>
             <ul className="list-disc pl-5">
               <li>แผ่นเกราะอยู่ในตำแหน่งที่ถูกต้อง ไม่สูงหรือต่ำเกินไป</li>
-              <li>ด้าน ด้านป้องกันกระสุน ของแผ่นเกราะแข็ง หันออกจากร่างกาย</li>
+              <li>ด้านป้องกันกระสุน ของแผ่นเกราะแข็ง หันออกจากร่างกาย</li>
               <li>สายรัดและแถบตีนตุ๊กแกทุกจุดปิดแน่น ไม่หลวม</li>
               <li>ระบบปลดเร็วพร้อมใช้งาน สายไม่พันหรือติดขัด</li>
             </ul>
@@ -246,16 +201,8 @@ const Vest00001Page = () => {
           {/* 3.5 Quick release */}
           <h4 className="text-xl font-semibold mt-6 mb-2 text-[#0360AE]">3.5 วิธีใช้ระบบปลดเร็ว (Quick Release)</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-            <StepCard
-              number="1"
-              desc="ดึงสายปลดเร็วอย่างแรงและต่อเนื่อง"
-              imgPlaceholder={Img003511}
-            />
-            <StepCard
-              number="2"
-              desc="เสื้อเกราะจะคลายออกจากร่างกายทันที ยกออกไปด้านข้างได้เลย"
-              imgPlaceholder="เสื้อเกราะเปิดออกจากร่างกายทันที"
-            />
+            <StepCard number="1" desc="กระตุกตัวปลดเร็วบริเวณบ่าออกจากลำตัวตามทิศของลูกศร" imgPlaceholder={Img003511} />
+            <StepCard number="2" desc="กระตุกตัวปลดเร็วบริเวณเอวลงด้านล่างตามทิศของลูกศร" imgPlaceholder={Img003512} />
           </div>
           <div className="p-3 rounded-lg text-sm bg-[#FEFCE8] text-[#23425D]">
             <strong>หมายเหตุ:</strong> หากตัวปลดเร็วชำรุด สามารถใช้ <strong>แถบตีนตุ๊กแกสำรอง</strong> บริเวณคาดเอวมาติดที่ด้านหน้าแทนได้
@@ -280,14 +227,8 @@ const Vest00001Page = () => {
               title="เก็บให้ห่างจากสารเคมี"
               desc="ไม่ควรให้อุปกรณ์สัมผัสสารเคมี น้ำมัน ตัวทำละลาย หรือสารกัดกร่อน เพราะอาจทำให้วัสดุเสื่อมสภาพ"
             />
-            <WarningCard
-              title="จัดเก็บอย่างเหมาะสม"
-              desc="ไม่ควรวางของหนักทับ พับงอ หรือบิดรูปอุปกรณ์เป็นเวลานาน"
-            />
-            <WarningCard
-              title="ไม่ดัดแปลงอุปกรณ์"
-              desc="ไม่ควรตัดแต่ง ดัดแปลง เปลี่ยนรูปทรง หรือแกะแผ่นเกราะอ่อนออกจากซองป้องกัน"
-            />
+            <WarningCard title="จัดเก็บอย่างเหมาะสม" desc="ไม่ควรวางของหนักทับ พับงอ หรือบิดรูปอุปกรณ์เป็นเวลานาน" />
+            <WarningCard title="ไม่ดัดแปลงอุปกรณ์" desc="ไม่ควรตัดแต่ง ดัดแปลง เปลี่ยนรูปทรง หรือแกะแผ่นเกราะอ่อนออกจากซองป้องกัน" />
             <WarningCard
               title="ตรวจสอบสภาพก่อนใช้งาน"
               desc="ควรตรวจสอบอุปกรณ์ทุกครั้งก่อนใช้งาน หากพบความเสียหายผิดปกติ ควรหยุดใช้งานและเปลี่ยนใหม่ทันที"
