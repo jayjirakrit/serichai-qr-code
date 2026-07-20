@@ -1,43 +1,60 @@
 // app/vests/VES00002/page.tsx
+import Img000 from "@/app/vests/VES00002/_assets/ves00002-0-0.jpg";
+import Img00311 from "@/app/vests/VES00002/_assets/ves00002-3.1-1.jpg";
+import Img00312 from "@/app/vests/VES00002/_assets/ves00002-3.1-2.jpg";
+import Img00313 from "@/app/vests/VES00002/_assets/ves00002-3.1-3.jpg";
+import Img00314 from "@/app/vests/VES00002/_assets/ves00002-3.1-4.jpg";
+import Img00321 from "@/app/vests/VES00002/_assets/ves00002-3.2-1.jpg";
+import Img00322 from "@/app/vests/VES00002/_assets/ves00002-3.2-2.jpg";
+// import Img00323 from "@/app/vests/VES00002/_assets/ves00002-3.2-4.jpg";
+import Img00331 from "@/app/vests/VES00002/_assets/ves00002-3.3-1.jpg";
+import Img00332 from "@/app/vests/VES00002/_assets/ves00002-3.3-2.jpg";
+import Img00333 from "@/app/vests/VES00002/_assets/ves00002-3.3-3.jpg";
+import Img00341 from "@/app/vests/VES00002/_assets/ves00002-3.4-1.jpg";
+import Img00342 from "@/app/vests/VES00002/_assets/ves00002-3.4-2.jpg";
+import Image from "next/image";
+import StepCard from "@/components/StepCard";
+import AdjustItem from "@/components/AdjustItem";
+import WarningCard from "@/components/WarningCard";
 
-export default function Vest00002Page() {
+const Vest00002Page = () => {
   return (
     <main className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
-        <div className="bg-white rounded-2xl shadow-md p-6 mb-8 text-center border-b-4" style={{ borderBottomColor: "#0360AE" }}>
+        <div className="bg-white rounded-2xl shadow-md p-6 mb-8 text-center border-b-4 border-b-[#0360AE]">
           <p className="text-sm uppercase tracking-wide text-gray-500">CH.PAISARN · HIGH QUALITY MILITARY EQUIPMENT</p>
-          <h1 className="text-3xl md:text-4xl font-bold mt-2" style={{ color: "#23425D" }}>
-            คู่มือการใช้งาน
-          </h1>
-          <h2 className="text-2xl font-semibold mt-1" style={{ color: "#0360AE" }}>
-            เสื้อเกราะป้องกันกระสุน แบบปลดเร็ว อันที่ 2
-          </h2>
+          <h1 className="text-3xl md:text-4xl font-bold mt-2 text-[#23425D]">คู่มือการใช้งาน</h1>
+          <h2 className="text-2xl font-semibold mt-1 text-[#0360AE]">เสื้อเกราะป้องกันกระสุนระดับ III</h2>
         </div>
 
-        {/* Image placeholder (main product) */}
-        <div className="bg-gray-100 rounded-xl p-6 mb-8 text-center border border-gray-200">
-          <div className="bg-gray-200 h-48 rounded-lg flex items-center justify-center text-gray-500">
-            📸 [ภาพหลัก: เสื้อเกราะ CHP® NEXUS มุมด้านหน้าเต็มตัว พื้นหลังเรียบ]
-          </div>
+        {/* Main product image – FIXED: aspect-ratio container, object-contain */}
+        <div className="relative w-full max-w-3xl mx-auto aspect-4/3 rounded-xl overflow-hidden mb-8 border border-gray-200 bg-white">
+          <Image
+            src={Img000}
+            alt="เสื้อเกราะป้องกันกระสุน แบบปลดเร็ว"
+            fill
+            style={{ objectFit: "contain" }}
+            sizes="(max-width: 768px) 100vw, 50vw"
+            priority
+          />
         </div>
 
-        {/* Important warnings - now blue/gold theme */}
-        <section className="rounded-xl p-6 mb-8" style={{ backgroundColor: "#EFF6FF", borderLeft: `8px solid ${"#0360AE"}` }}>
-          <h3 className="text-xl font-bold flex items-center gap-2" style={{ color: "#23425D" }}>
+        {/* Important warnings */}
+        <section className="rounded-xl p-6 mb-8 bg-[#EFF6FF] border-l-8 border-l-[#0360AE]">
+          <h3 className="text-xl font-bold flex items-center gap-2 text-[#23425D]">
             <span>⏱</span> สิ่งสำคัญที่ต้องรู้ก่อนใช้งาน
           </h3>
           <ul className="mt-4 space-y-3 text-gray-800">
             <li>
-              1. <strong>ต้องใช้แผ่นเกราะอ่อนและแผ่นเกราะแข็งร่วมกันทุกครั้ง</strong> เพื่อให้ได้ระดับการป้องกันตามที่กำหนด
+              1. เสื้อเกราะป้องกันกระสุน ระดับ 3 ใช้แผ่นเกราะแข็งชนิด Stand-Alone
+              สามารถให้ระดับการป้องกันกระสุนตามที่ระบุได้โดยไม่จำเป็นต้องใช้ร่วมกับแผ่นเกราะอ่อน ทั้งนี้
+              ระดับการป้องกันดังกล่าวครอบคลุมเฉพาะบริเวณที่มีแผ่นเกราะแข็งเท่านั้น
             </li>
             <li>
-              2. หันด้าน <strong>STRIKE FACE</strong> ของแผ่นเกราะแข็งออกจากร่างกายเสมอ หากใส่กลับด้าน ระดับการป้องกันอาจลดลง
+              2. หัน <strong>ด้านป้องกันกระสุน</strong> ของแผ่นเกราะแข็งออกจากร่างกายเสมอ หากใส่กลับด้าน ระดับการป้องกันอาจลดลง
             </li>
-            <li>
-              3. ก่อนใช้งานทุกครั้ง ต้องเลือกขนาดเสื้อเกราะให้เหมาะกับสรีระของผู้สวมใส่ และปรับเสื้อเกราะให้พอดี
-              เพื่อให้แผ่นเกราะอยู่ในตำแหน่งที่ถูกต้องและครอบคลุมอวัยวะสำคัญ
-            </li>
+            <li>3. ก่อนใช้งานทุกครั้ง ต้องปรับตำแหน่งแผ่นเกราะให้พอดีอยู่ในตำแหน่งที่ถูกต้องและครอบคลุมอวัยวะสำคัญ</li>
             <li>
               4. หากแผ่นเกราะถูกยิง ตกกระแทกรุนแรง ชำรุด หรือหมดอายุ <strong>ต้องหยุดใช้งานทันที</strong> และเปลี่ยนแผ่นเกราะใหม่
             </li>
@@ -46,41 +63,18 @@ export default function Vest00002Page() {
 
         {/* 1. Protection capability */}
         <section className="bg-white rounded-xl shadow-md p-6 mb-8">
-          <h3 className="text-2xl font-bold border-b pb-2 mb-4" style={{ color: "#23425D", borderBottomColor: "#FBCC11" }}>
-            1. ขีดความสามารถในการป้องกัน
-          </h3>
-          <p className="text-gray-700 mb-4">
-            เสื้อเกราะป้องกันกระสุน แบบปลดเร็ว เป็นเสื้อเกราะรูปแบบ <strong>ICW (In Conjunction With)</strong> ซึ่งต้องใช้งานแผ่นเกราะอ่อน (Soft
-            Armor) ร่วมกับแผ่นเกราะแข็ง (Hard Plate) ตามที่กำหนด เพื่อให้ได้ระดับการป้องกันตามที่ระบุ การใช้งานเพียงส่วนใดส่วนหนึ่ง
-            อาจทำให้ระดับการป้องกันลดลง
-          </p>
+          <h3 className="text-2xl font-bold border-b pb-2 mb-4 text-[#23425D] border-b-[#FBCC11]">1. ขีดความสามารถในการป้องกัน</h3>
+          <p className="text-gray-700 mb-4">เสื้อเกราะป้องกันกระสุน ระดับ 3 เป็นเสื้อเกราะรูปแบบ Stand alone สามารถป้องกันกระสุนตามที่ระบุ</p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-            <div className="border rounded-lg p-4" style={{ backgroundColor: "#F5F9FF", borderColor: "#0360AE" }}>
-              <h4 className="text-xl font-semibold" style={{ color: "#23425D" }}>
-                แผ่นเกราะอ่อน
-              </h4>
-              <p className="text-lg font-mono" style={{ color: "#0360AE" }}>
-                NIJ Level IIIA
-              </p>
+            <div className="border rounded-lg p-4 bg-[#F5F9FF] border-[#0360AE]">
+              <h4 className="text-xl font-semibold text-[#23425D]">แผ่นเกราะแข็ง</h4>
+              <p className="text-lg font-mono text-[#0360AE]">NIJ Level III++</p>
               <ul className="list-disc pl-5 mt-2 space-y-1">
-                <li>9 mm</li>
-                <li>.44 Magnum</li>
-                <li>สะเก็ดระเบิด</li>
-              </ul>
-            </div>
-            <div className="border rounded-lg p-4" style={{ backgroundColor: "#F5F9FF", borderColor: "#0360AE" }}>
-              <h4 className="text-xl font-semibold" style={{ color: "#23425D" }}>
-                แผ่นเกราะแข็ง
-              </h4>
-              <p className="text-lg font-mono" style={{ color: "#0360AE" }}>
-                NIJ Level III++
-              </p>
-              <ul className="list-disc pl-5 mt-2 space-y-1">
-                <li>7.62 × 51 mm FMJ</li>
-                <li>7.62 × 39 mm MSC (AK)</li>
-                <li>5.56 × 45 mm M193</li>
-                <li>5.56 × 45 mm M855 / SS109</li>
+                <li>7.62 x 51 mm FMJ</li>
+                <li>7.62 x 39 mm MSC (AK)</li>
+                <li>5.56 x 45 mm M193</li>
+                <li>5.56 x 45 mm M855 / SS109</li>
               </ul>
             </div>
           </div>
@@ -89,44 +83,43 @@ export default function Vest00002Page() {
 
         {/* 2. Key features */}
         <section className="bg-white rounded-xl shadow-md p-6 mb-8">
-          <h3 className="text-2xl font-bold border-b pb-2 mb-4" style={{ color: "#23425D", borderBottomColor: "#FBCC11" }}>
-            2. คุณสมบัติหลัก
-          </h3>
+          <h3 className="text-2xl font-bold border-b pb-2 mb-4 text-[#23425D] border-b-[#FBCC11]">2. คุณสมบัติหลัก</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex gap-3">
               <span className="text-3xl">⚡</span>
               <div>
-                <h4 className="font-bold" style={{ color: "#0360AE" }}>
-                  พื้นที่ป้องกันครอบคลุมรอบลำตัว
+                <h4 className="font-bold text-[#0360AE]">
+                  ระบบป้องกันแบบ <strong>Stand-Alone</strong>
                 </h4>
-                <p className="text-gray-600 text-sm">แผ่นเกราะอ่อนออกแบบให้ช่วยปกป้องบริเวณด้านหน้า ด้านหลัง และด้านข้างของลำตัว</p>
+                <p className="text-gray-600 text-sm">
+                  แผ่นเกราะแข็งสามารถให้ระดับการป้องกันตามที่กำหนดได้โดยไม่ต้องใช้แผ่นเกราะอ่อนเสริม
+                  พร้อมออกแบบตำแหน่งแผ่นเกราะให้ครอบคลุมอวัยวะสำคัญบริเวณหน้าอกและแผ่นหลัง
+                </p>
               </div>
             </div>
             <div className="flex gap-3">
               <span className="text-3xl">⚡</span>
               <div>
-                <h4 className="font-bold" style={{ color: "#0360AE" }}>
-                  มีระบบปลดเร็ว
-                </h4>
-                <p className="text-gray-600 text-sm">ช่วยให้สวมใส่และถอดเสื้อเกราะได้สะดวก และถอดออกได้อย่างรวดเร็วในสถานการณ์ฉุกเฉิน</p>
+                <h4 className="font-bold text-[#0360AE]">ระบบปลดเร็วรอบทิศทาง</h4>
+                <p className="text-gray-600 text-sm">
+                  ติดตั้งระบบปลดเร็วบริเวณไหล่ทั้ง 2 ด้านและด้านข้างลำตัว ช่วยให้ถอดเสื้อเกราะได้อย่างรวดเร็วในสถานการณ์ฉุกเฉิน
+                </p>
               </div>
             </div>
             <div className="flex gap-3">
               <span className="text-3xl">↔</span>
               <div>
-                <h4 className="font-bold" style={{ color: "#0360AE" }}>
-                  ปรับขนาดเข้ากับสรีระผู้ใช้
-                </h4>
-                <p className="text-gray-600 text-sm">ปรับความสูงบริเวณไหล่และความกระชับช่วงลำตัว พร้อมช่วยให้เคลื่อนไหวได้คล่องตัว</p>
+                <h4 className="font-bold text-[#0360AE]">ปรับกระชับตามสรีระผู้สวมใส่</h4>
+                <p className="text-gray-600 text-sm">
+                  สามารถปรับระดับบริเวณไหล่และรอบลำตัว พร้อมสายรัดยางยืดที่ช่วยเพิ่มความกระชับและรองรับการเคลื่อนไหว
+                </p>
               </div>
             </div>
             <div className="flex gap-3">
               <span className="text-3xl">▦</span>
               <div>
-                <h4 className="font-bold" style={{ color: "#0360AE" }}>
-                  รองรับการติดตั้งอุปกรณ์เสริม
-                </h4>
-                <p className="text-gray-600 text-sm">รองรับการติดตั้งกระเป๋าและอุปกรณ์เสริมผ่านระบบ MOLLE</p>
+                <h4 className="font-bold text-[#0360AE]">ออกแบบเพื่อความคล่องตัว</h4>
+                <p className="text-gray-600 text-sm">โครงสร้างได้รับการออกแบบให้กระชับกับร่างกายและลดการรบกวนการเคลื่อนไหวขณะปฏิบัติภารกิจ</p>
               </div>
             </div>
           </div>
@@ -134,140 +127,74 @@ export default function Vest00002Page() {
 
         {/* 3. Usage instructions */}
         <section className="bg-white rounded-xl shadow-md p-6 mb-8">
-          <h3 className="text-2xl font-bold border-b pb-2 mb-4" style={{ color: "#23425D", borderBottomColor: "#FBCC11" }}>
-            3. วิธีการใช้งาน
-          </h3>
+          <h3 className="text-2xl font-bold border-b pb-2 mb-4 text-[#23425D] border-b-[#FBCC11]">3. วิธีการใช้งาน</h3>
 
           {/* 3.1 How to wear/remove */}
-          <h4 className="text-xl font-semibold mt-4 mb-2" style={{ color: "#0360AE" }}>
-            3.1 วิธีสวมใส่และถอด
-          </h4>
+          <h4 className="text-xl font-semibold mt-4 mb-2 text-[#0360AE]">3.1 วิธีสวมใส่และถอด</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-            <StepCard
-              number="1"
-              desc="ถือเสื้อเกราะหันด้านหน้าเข้าหาตัว เปิดสายรัดไหล่ทั้งสองข้าง"
-              imgPlaceholder="ภาพ: ถือเสื้อเกราะ หันด้านหน้าเข้าหาตัว เปิดสายไหล่ออก"
-            />
-            <StepCard
-              number="2"
-              desc="สวมผ่านศีรษะ ให้แผ่นเกราะด้านหน้าอยู่บนหน้าอก"
-              imgPlaceholder="ภาพ: สวมทางหัว ให้แผ่นเกราะด้านหน้าอยู่ที่หน้าอก"
-            />
-            <StepCard number="3" desc="ปิดหัวเข็มขัดปลดเร็วที่ไหล่ให้ได้ยินเสียงคลิก" imgPlaceholder="ภาพ: ปิดหัวเข็มขัดปลดเร็วที่ไหล่" />
-            <StepCard number="4" desc="ปิดแถบตีนตุ๊กแกด้านข้างทั้งสองข้างให้แน่น" imgPlaceholder="ภาพ: รัดสายด้านข้างทั้งสองข้างให้แน่น" />
+            <StepCard number="1" desc="ถือเสื้อเกราะหันด้านหน้าเข้าหาตัว เปิดตัวปลดเร็วที่บริเวณไหล่และข้างลำตัว" imgPlaceholder={Img00311} />
+            <StepCard number="2" desc="สวมผ่านศีรษะ ให้แผ่นเกราะด้านหน้าอยู่บนหน้าอก" imgPlaceholder={Img00312} />
+            <StepCard number="3" desc="ปิดหัวเข็มขัดปลดเร็วที่ไหล่และข้างลำตัวให้ได้ยินเสียงคลิก" imgPlaceholder={Img00313} />
+            <StepCard number="4" desc="ปรับขนาดสายรัดข้างตัวให้กระชับเข้ารูป" imgPlaceholder={Img00314} />
           </div>
-          <div className="p-3 rounded-lg mb-6" style={{ backgroundColor: "#EFF6FF", color: "#23425D" }}>
+          <div className="p-3 rounded-lg mb-6 bg-[#EFF6FF] text-[#23425D]">
             <strong>วิธีถอด:</strong> เปิดแถบตีนตุ๊กแกด้านข้างก่อน จากนั้นเปิดหัวเข็มขัดไหล่ แล้วถอดเสื้อออกทางศีรษะ
           </div>
 
           {/* 3.2 How to insert plates */}
-          <h4 className="text-xl font-semibold mt-6 mb-2" style={{ color: "#0360AE" }}>
-            3.2 วิธีใส่แผ่นเกราะ
-          </h4>
-          <div className="p-3 mb-4 border-l-4" style={{ backgroundColor: "#FEE2E2", borderLeftColor: "#FF0000", color: "#7F1D1D" }}>
-            <strong>สำคัญมาก:</strong> หันด้านที่ระบุ <strong>&quot;STRIKE FACE&quot;</strong> ของแผ่นเกราะแข็งออกจากร่างกายเสมอ หากใส่กลับด้าน
-            จะทำให้การป้องกันล้มเหลว
-          </div>
+          <h4 className="text-xl font-semibold mt-6 mb-2 text-[#0360AE]">3.2 วิธีใส่แผ่นเกราะ</h4>
+          <WarningCard
+            title="สำคัญมาก"
+            desc="ดูแลไม่ให้แผ่นเกราะแข็งตกกระแทกพื้นโดยตรงอาจทำให้แผ่นเกราะแข็งเสียหายได้ โดยหันด้านที่มีตัวหนังสือบอกระดับการป้องกันออกจากตัว"
+          />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <StepCard
-              number="1"
-              desc="เปิดแถบตีนตุ๊กแกด้านบนของช่องใส่แผ่นเกราะ"
-              imgPlaceholder="ภาพ: เปิดแถบตีนตุ๊กแกด้านบนของกระเป๋าใส่แผ่นเกราะ"
-            />
-            <StepCard
-              number="2"
-              desc="ใส่แผ่นเกราะอ่อนก่อน ให้ด้านที่ระบุไว้หันเข้าหาร่างกาย"
-              imgPlaceholder="ภาพ: ใส่แผ่นเกราะอ่อน ให้ด้านที่เขียน This side to body หันเข้าตัว"
-            />
-            <StepCard
-              number="3"
-              desc="ใส่แผ่นเกราะแข็ง โดยหันด้าน STRIKE FACE ออกจากร่างกาย"
-              imgPlaceholder="ภาพ: ใส่แผ่นเกราะแข็ง โดยหัน STRIKE FACE ออกจากตัว"
-            />
-            <StepCard number="4" desc="ปิดแถบตีนตุ๊กแกให้แน่น จากนั้นทำซ้ำกับแผ่นเกราะด้านหลัง" imgPlaceholder="ภาพ: ปิดช่องและตรวจสอบให้แน่น" />
+            <StepCard number="1" desc="เปิดแถบตีนตุ๊กแกด้านบนของช่องใส่แผ่นเกราะ" imgPlaceholder={Img00321} />
+            <StepCard number="2" desc="ใส่แผ่นเกราะแข็ง โดยหัน ด้านป้องกันกระสุน ออกจากร่างกาย" imgPlaceholder={Img00322} />
+            <StepCard number="3" desc="ปิดแถบตีนตุ๊กแกให้แน่น จากนั้นทำซ้ำกับแผ่นเกราะด้านหลัง" imgPlaceholder={Img00322} />
           </div>
 
           {/* 3.3 Adjustment */}
-          <h4 className="text-xl font-semibold mt-6 mb-2" style={{ color: "#0360AE" }}>
-            3.3 วิธีปรับขนาดให้พอดีกับผู้สวมใส่
-          </h4>
+          <h4 className="text-xl font-semibold mt-6 mb-2 text-[#0360AE]">3.3 วิธีปรับขนาดให้พอดีกับผู้สวมใส่</h4>
           <div className="space-y-3 mb-6">
-            <AdjustItem
-              title="ปรับระดับความสูง"
-              desc="ปรับสายรัดที่หัวขัดพลาสติกบริเวณไหล่ทั้งสองข้าง เพื่อให้แผ่นเกราะอยู่ในตำแหน่งที่ถูกต้อง"
-              img="มือปรับสายรัดที่หัวขัดพลาสติกบนไหล่"
-            />
-            <AdjustItem
-              title="ปรับความกระชับด้านข้าง"
-              desc="ปรับแถบตีนตุ๊กแกที่อยู่ใต้กระเป๋าใส่ซองกระสุนด้านหน้า"
-              img="แถบตีนตุ๊กแกใต้กระเป๋าใส่ซองกระสุนด้านหน้า"
-            />
-            <AdjustItem
-              title="ปรับสายยางยืดด้านหลัง"
-              desc="ผูกสั้นลง = กระชับขึ้น, ผูกยาวขึ้น = หลวมลง ควรปรับทั้งสองข้างให้สมดุล"
-              img="มือผูกสายยางยืดด้านหลัง สั้น-ยาว"
-            />
-            <AdjustItem title="สลับด้านตัวปลดเร็วไหล่" desc="ถอดออกและสลับข้างได้ตามความถนัดของผู้ใช้" img="ถอดสลับตัวปลดเร็วไหล่ข้างที่ถนัด" />
+            <AdjustItem title="ปรับระดับความสูง" desc="ปรับความยาวสายบ่า เพื่อให้แผ่นเกราะอยู่ในตำแหน่งที่ถูกต้อง" img={Img00331} />
+            <AdjustItem title="ปรับความกระชับด้านข้าง" desc="ปรับแถบตีนตุ๊กแกที่อยู่ใต้กระเป๋าใส่ซองกระสุนด้านหน้า" img={Img00332} />
+            <AdjustItem title="ปรับสายยางยืดด้านหลัง" desc="ผูกสั้นลง = กระชับขึ้น, ผูกยาวขึ้น = หลวมลง ควรปรับทั้งสองข้างให้สมดุล" img={Img00333} />
           </div>
 
           {/* 3.4 Position check */}
-          <h4 className="text-xl font-semibold mt-6 mb-2" style={{ color: "#0360AE" }}>
-            3.4 ตรวจสอบตำแหน่งก่อนใช้งาน
-          </h4>
+          <h4 className="text-xl font-semibold mt-6 mb-2 text-[#0360AE]">3.4 ตรวจสอบตำแหน่งก่อนใช้งาน</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-            <div className="border rounded-lg p-3 text-center" style={{ borderColor: "#0360AE" }}>
-              <div className="bg-gray-100 h-32 rounded flex items-center justify-center text-xs">
-                📐 [ภาพ: ด้านหน้า ขอบบนของแผ่นเกราะอยู่ที่แอ่งคอระหว่างไหปลาร้า]
+            <div className="border rounded-lg p-3 text-center border-[#0360AE]">
+              <div className="relative bg-gray-100 h-48 rounded flex items-center justify-center text-xs">
+                <Image src={Img00341} alt="ภาพ: ด้านหน้า ขอบบนของแผ่นเกราะอยู่ที่แอ่งคอระหว่างไหปลาร้า" fill style={{ objectFit: "contain" }} />
               </div>
-              <p className="mt-2 font-bold" style={{ color: "#23425D" }}>
-                Front Fitting
-              </p>
+              <p className="mt-2 font-bold text-[#23425D]">ด้านหน้า</p>
               <p className="text-sm">ขอบบนของแผ่นเกราะอยู่ที่แอ่งคอระหว่างไหปลาร้า</p>
             </div>
-            <div className="border rounded-lg p-3 text-center" style={{ borderColor: "#0360AE" }}>
-              <div className="bg-gray-100 h-32 rounded flex items-center justify-center text-xs">
-                📐 [ภาพ: ด้านหลัง แผ่นเกราะอยู่ในระดับเดียวกับด้านหน้า]
+            <div className="border rounded-lg p-3 text-center border-[#0360AE]">
+              <div className="relative bg-gray-100 h-48 rounded flex items-center justify-center text-xs">
+                <Image src={Img00342} alt="ภาพ: ด้านหลัง แผ่นเกราะอยู่ในระดับเดียวกับด้านหน้า" fill style={{ objectFit: "contain" }} />
               </div>
-              <p className="mt-2 font-bold" style={{ color: "#23425D" }}>
-                Rear Fitting
-              </p>
+              <p className="mt-2 font-bold text-[#23425D]">ด้านข้าง</p>
               <p className="text-sm">ระดับเดียวกับแผ่นเกราะด้านหน้า ครอบคลุมกระดูกสันหลัง</p>
             </div>
           </div>
-          <div className="p-4 rounded-lg space-y-1" style={{ backgroundColor: "#F5F9FF" }}>
-            <p className="font-bold" style={{ color: "#23425D" }}>
-              ✅ ก่อนใช้งาน ตรวจสอบให้ครบ:
-            </p>
+          <div className="p-4 rounded-lg space-y-1 bg-[#F5F9FF] text-[#23425D]">
+            <p className="font-bold">✅ ก่อนใช้งาน ตรวจสอบให้ครบ:</p>
             <ul className="list-disc pl-5">
               <li>แผ่นเกราะอยู่ในตำแหน่งที่ถูกต้อง ไม่สูงหรือต่ำเกินไป</li>
-              <li>ด้าน STRIKE FACE ของแผ่นเกราะแข็ง หันออกจากร่างกาย</li>
+              <li>ด้าน ด้านป้องกันกระสุน ของแผ่นเกราะแข็ง หันออกจากร่างกาย</li>
               <li>สายรัดและแถบตีนตุ๊กแกทุกจุดปิดแน่น ไม่หลวม</li>
               <li>ระบบปลดเร็วพร้อมใช้งาน สายไม่พันหรือติดขัด</li>
             </ul>
           </div>
-
-          {/* 3.5 Quick release */}
-          <h4 className="text-xl font-semibold mt-6 mb-2" style={{ color: "#0360AE" }}>
-            3.5 วิธีใช้ระบบปลดเร็ว (Quick Release)
-          </h4>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-            <StepCard number="1" desc="ดึงสายปลดเร็วอย่างแรงและต่อเนื่อง" imgPlaceholder="มือดึงสายปลดเร็วที่บริเวณไหล่/หน้าอก" />
-            <StepCard number="2" desc="เสื้อเกราะจะคลายออกจากร่างกายทันที ยกออกไปด้านข้างได้เลย" imgPlaceholder="เสื้อเกราะเปิดออกจากร่างกายทันที" />
-          </div>
-          <div className="p-3 rounded-lg text-sm" style={{ backgroundColor: "#FEFCE8", color: "#23425D" }}>
-            <strong>หมายเหตุ:</strong> หากตัวปลดเร็วชำรุด สามารถใช้ <strong>แถบตีนตุ๊กแกสำรอง</strong> บริเวณคาดเอวมาติดที่ด้านหน้าแทนได้
-          </div>
         </section>
 
-        {/* 4. Maintenance & warnings - all red removed */}
+        {/* 4. Maintenance & warnings */}
         <section className="bg-white rounded-xl shadow-md p-6 mb-8">
-          <h3 className="text-2xl font-bold border-b pb-2 mb-4" style={{ color: "#23425D", borderBottomColor: "#FBCC11" }}>
-            4. การดูแลรักษาและข้อควรระวัง
-          </h3>
+          <h3 className="text-2xl font-bold border-b pb-2 mb-4 text-[#23425D] border-b-[#FBCC11]">4. การดูแลรักษาและข้อควรระวัง</h3>
 
-          <h4 className="text-xl font-semibold mt-2" style={{ color: "#0360AE" }}>
-            4.1 ข้อห้าม
-          </h4>
+          <h4 className="text-xl font-semibold mt-2 text-[#0360AE]">4.1 ข้อห้าม</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
             <WarningCard
               title="ระมัดระวังการทำตกและถูกกระแทก"
@@ -289,27 +216,23 @@ export default function Vest00002Page() {
             />
           </div>
 
-          <h4 className="text-xl font-semibold mt-6" style={{ color: "#0360AE" }}>
-            4.2 การทำความสะอาด
-          </h4>
+          <h4 className="text-xl font-semibold mt-6 text-[#0360AE]">4.2 การทำความสะอาด</h4>
           <div className="space-y-3 my-4">
-            <div className="border rounded-lg p-3" style={{ borderColor: "#0360AE" }}>
-              <strong style={{ color: "#23425D" }}>ส่วนที่ 1 ตัวเสื้อ (Carrier)</strong>
+            <div className="border rounded-lg p-3 border-[#0360AE]">
+              <strong className="text-[#23425D]">ส่วนที่ 1 ตัวเสื้อ (Carrier)</strong>
               <p className="text-sm mt-1">
                 ทำความสะอาดด้วยผ้าชุบน้ำหมาด หรือซักด้วยวิธีที่อ่อนโยน แล้วผึ่งให้แห้งในที่ร่ม หลีกเลี่ยงน้ำยาฟอกขาว สารเคมีรุนแรง และความร้อนโดยตรง
               </p>
             </div>
-            <div className="border rounded-lg p-3" style={{ borderColor: "#0360AE" }}>
-              <strong style={{ color: "#23425D" }}>ส่วนที่ 2 แผ่นเกราะอ่อน (Soft Armor) และแผ่นเกราะแข็ง (Hard Plate)</strong>
+            <div className="border rounded-lg p-3 border-[#0360AE]">
+              <strong className="text-[#23425D]">ส่วนที่ 2 แผ่นเกราะแข็ง (Hard Plate)</strong>
               <p className="text-sm mt-1">
                 เช็ดทำความสะอาดด้วยผ้าชุบน้ำหมาดเท่านั้น แล้วผึ่งให้แห้งในที่ร่มจนแห้งสนิท ไม่ควรแช่น้ำ ซัก หรือใช้สารเคมี
               </p>
             </div>
           </div>
 
-          <h4 className="text-xl font-semibold mt-6" style={{ color: "#0360AE" }}>
-            4.3 การเก็บรักษา
-          </h4>
+          <h4 className="text-xl font-semibold mt-6 text-[#0360AE]">4.3 การเก็บรักษา</h4>
           <ul className="list-disc pl-5 space-y-1 mt-2">
             <li>✓ หลังใช้งาน ควรทำความสะอาดอุปกรณ์ก่อนจัดเก็บ</li>
             <li>✓ หากอุปกรณ์เปียกน้ำหรือมีความชื้น ควรผึ่งในที่ร่มจนแห้งสนิทก่อนเก็บ</li>
@@ -318,13 +241,13 @@ export default function Vest00002Page() {
             <li>✓ เก็บในที่ร่ม แห้ง อากาศถ่ายเทสะดวก หลีกเลี่ยงพื้นที่อับชื้น อุณหภูมิสูง และแสงแดด</li>
           </ul>
 
-          <div className="mt-6 text-center text-sm border-t pt-4" style={{ color: "#0360AE", borderTopColor: "#FBCC11" }}>
+          <div className="mt-6 text-center text-sm border-t pt-4 text-[#0360AE] border-t-[#FBCC11]">
             📅 ตรวจสอบวันที่ผลิตและวันหมดอายุจากป้ายสินค้าของคุณ
           </div>
         </section>
 
         {/* Footer */}
-        <footer className="text-center text-sm border-t pt-6 mt-4" style={{ color: "#23425D", borderTopColor: "#0360AE" }}>
+        <footer className="text-center text-sm border-t pt-6 mt-4 text-[#23425D] border-t-[#0360AE]">
           <p>บริษัท ช.ไพศาล จำกัด</p>
           <p>179 หมู่ 11 ต.บ้านเชี่ยน อ.หันคา จ.ชัยนาท 17130</p>
           <p>โทรศัพท์ (056) 451982-6 · โทรสาร (056) 451987</p>
@@ -332,42 +255,6 @@ export default function Vest00002Page() {
       </div>
     </main>
   );
-}
+};
 
-// Helper components (unchanged except colors)
-function StepCard({ number, desc, imgPlaceholder }: { number: string; desc: string; imgPlaceholder: string }) {
-  return (
-    <div className="border rounded-lg p-3" style={{ backgroundColor: "#F5F9FF", borderColor: "#0360AE" }}>
-      <div className="bg-gray-200 h-28 rounded flex items-center justify-center text-xs text-gray-500 mb-2">🖼️ {imgPlaceholder}</div>
-      <p className="font-bold text-lg inline-block px-2 rounded mr-2" style={{ backgroundColor: "#FBCC11", color: "#23425D" }}>
-        {number}
-      </p>
-      <p className="text-sm inline">{desc}</p>
-    </div>
-  );
-}
-
-function AdjustItem({ title, desc, img }: { title: string; desc: string; img: string }) {
-  return (
-    <div className="flex gap-3 items-start border-b pb-2" style={{ borderBottomColor: "#E2E8F0" }}>
-      <div className="w-24 h-16 bg-gray-100 rounded shrink-0 flex items-center justify-center text-xs">🖼️ {img.slice(0, 20)}...</div>
-      <div>
-        <p className="font-semibold" style={{ color: "#23425D" }}>
-          {title}
-        </p>
-        <p className="text-sm text-gray-600">{desc}</p>
-      </div>
-    </div>
-  );
-}
-
-function WarningCard({ title, desc }: { title: string; desc: string }) {
-  return (
-    <div className="border-l-4 p-3 rounded-r" style={{ borderLeftColor: "#FBCC11", backgroundColor: "#FEFCE8" }}>
-      <p className="font-semibold" style={{ color: "#23425D" }}>
-        {title}
-      </p>
-      <p className="text-sm text-gray-700">{desc}</p>
-    </div>
-  );
-}
+export default Vest00002Page;
