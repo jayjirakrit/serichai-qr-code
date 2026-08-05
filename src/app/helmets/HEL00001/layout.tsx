@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Bulletproof Vest",
-  description: "Bulletproof Vest Instruction Guidelines",
+  title: "Ballistic Helmet",
+  description: "Ballistic Helmet Instruction Guidelines",
 };
 
 export default function HelmentsLayout({ children }: { children: React.ReactNode }) {
