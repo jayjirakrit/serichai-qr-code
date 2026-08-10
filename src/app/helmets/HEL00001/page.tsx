@@ -1,9 +1,9 @@
 // app/helmets/HEL00001/page.tsx
 import Img000 from "@/app/helmets/HEL00001/_assets/hel00001-0-0.jpg";
 import Img001 from "@/app/helmets/HEL00001/_assets/hel00001-0-1.jpg";
-import Img00311 from "@/app/helmets/HEL00001/_assets/hel00001-3.1-1.jpg";
 import Img00321 from "@/app/helmets/HEL00001/_assets/hel00001-3.2-1.jpg";
 import Img00322 from "@/app/helmets/HEL00001/_assets/hel00001-3.2-2.jpg";
+import Img00323 from "@/app/helmets/HEL00001/_assets/hel00001-3.2-3.jpg";
 import Img00324 from "@/app/helmets/HEL00001/_assets/hel00001-3.2-4.jpg";
 import Img00331 from "@/app/helmets/HEL00001/_assets/hel00001-3.3-1.jpg";
 import Img00332 from "@/app/helmets/HEL00001/_assets/hel00001-3.3-2.jpg";
@@ -57,18 +57,16 @@ const Helmet00001Page = () => {
           </h3>
           <ul className="mt-4 space-y-3 text-gray-800">
             <li>
-              1. <strong>ปรับหมวกให้กระชับและอยู่ในตำแหน่งที่ถูกต้องก่อนใช้งานทุกครั้ง</strong> ปรับแผ่นรองภายใน สายรัดคาง
-              และระบบปรับกระชับด้านหลังให้พอดีกับศีรษะ หมวกต้องไม่หลวม เลื่อน หมุน บดบังทัศนวิสัย หรือขยับออกจากตำแหน่งขณะเคลื่อนไหว
+              1. <strong>ปรับหมวกให้พอดีและมั่นคง</strong> ปรับแผ่นรอง สายรัดคาง และระบบปรับกระชับให้พอดีกับศีรษะ ต้องไม่หลวม เลื่อน หมุน
+              หรือบดบังทัศนวิสัยขณะเคลื่อนไหว
             </li>
             <li>
-              2. ตรวจสอบ<strong>ระดับการป้องกันและสภาพหมวก</strong>ก่อนใช้งานทุกครั้ง ใช้หมวกให้ตรงตามระดับการป้องกันที่ระบุบนฉลากผลิตภัณฑ์เท่านั้น
-              และตรวจสอบเปลือกหมวก แผ่นรอง สายรัดคาง หัวเข็มขัด น็อตยึด รางติดตั้งอุปกรณ์ และระบบปรับกระชับ หากพบชิ้นส่วนชำรุด หลวม สูญหาย
-              หรือทำงานผิดปกติ <strong>ห้ามนำหมวกไปใช้งาน</strong>จนกว่าจะซ่อมหรือเปลี่ยนชิ้นส่วนเรียบร้อย
+              2. <strong>ตรวจสอบระดับการป้องกันและสภาพหมวก</strong> ใช้หมวกให้ตรงตามระดับการป้องกันที่ระบุบนฉลาก และตรวจสอบเปลือกหมวก แผ่นรอง สายรัด
+              น็อต และอุปกรณ์ยึดก่อนใช้งานทุกครั้ง
             </li>
             <li>
-              3. <strong>ห้ามใช้งานต่อหลังถูกยิงหรือได้รับความเสียหายรุนแรง</strong> หมวกที่ถูกยิงหรือถูกสะเก็ดต้องหยุดใช้งานและเปลี่ยนใหม่ทันที
-              หากหมวกตกกระแทกรุนแรง มีรอยร้าว บวม โก่งตัว ชั้นวัสดุแยกออกจากกัน หรือระบบยึดตรึงชำรุด
-              ให้แยกหมวกออกจากการใช้งานและส่งตรวจสอบโดยบริษัทหรือผู้ที่ได้รับอนุญาต
+              3. <strong>หยุดใช้งานทันทีหลังถูกยิงหรือกระแทกรุนแรง</strong> หมวกที่ถูกยิง ถูกสะเก็ด หรือได้รับแรงกระแทกรุนแรง ต้องแยกออกจากการใช้งาน
+              และส่งตรวจสอบหรือเปลี่ยนใหม่ทันที
             </li>
           </ul>
         </section>
@@ -138,41 +136,24 @@ const Helmet00001Page = () => {
         <section className="bg-white rounded-xl shadow-md p-6 mb-8">
           <h3 className="text-2xl font-bold border-b pb-2 mb-4 text-[#23425D] border-b-[#FBCC11]">3. วิธีการใช้งาน</h3>
 
-          {/* 3.1 Components */}
-          <h4 className="text-xl font-semibold mt-4 mb-2 text-[#0360AE]">3.1 ส่วนประกอบของหมวก</h4>
-          <p className="text-gray-700 mb-4">ส่วนประกอบหลักของหมวกเกราะอาจแตกต่างกันตามรุ่น โดยทั่วไปประกอบด้วย</p>
-          <div className="relative h-64 rounded-lg overflow-hidden bg-gray-100 border border-gray-200 mb-4">
-            <Image src={Img00311} alt="ภาพส่วนประกอบภายในของหมวก — แผ่นรอง สายรัด จานหมุนปรับกระชับ" fill style={{ objectFit: "contain" }} />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 mb-6 text-gray-700">
-            <p>• เปลือกหมวกเกราะ</p>
-            <p>• แผ่นรองหมวก</p>
-            <p>• สายรัดคางด้านหน้า 2 เส้น</p>
-            <p>• สายรัดคางด้านหลัง 2 เส้น</p>
-            <p>• ตัวล็อกหรือหัวเข็มขัดปลดเร็ว</p>
-            <p>• จานหมุนปรับกระชับด้านหลัง</p>
-            <p>• รางข้างสำหรับติดตั้งอุปกรณ์เสริม</p>
-            <p>• ฐานติดตั้งอุปกรณ์ด้านหน้า</p>
-            <p>• แถบตีนตุ๊กแกสำหรับติดเครื่องหมายหรืออุปกรณ์เสริม</p>
-          </div>
-
-          {/* 3.2 How to wear/remove */}
-          <h4 className="text-xl font-semibold mt-6 mb-2 text-[#0360AE]">3.2 วิธีสวมใส่และถอด</h4>
+          {/* 3.1 How to wear/remove */}
+          <h4 className="text-xl font-semibold mt-6 mb-2 text-[#0360AE]">3.1 วิธีสวมใส่และถอด</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
             <StepCard number="1" desc="ปลดตัวล็อกปลดเร็วของสายรัดคางออกก่อนสวมใส่" imgPlaceholder={Img00321} />
             <StepCard number="2" desc="สวมหมวกลงบนศีรษะ และล็อกตัวปลดเร็วของสายรัดคาง" imgPlaceholder={Img00322} />
             <StepCard
               number="3"
-              desc="ปรับความยาวสายรัดคางด้านข้างให้พอดี ไม่ตึงหรือหย่อนเกินไป ล๊อคตัวปลดเร็วสายรัดคางให้เรียบร้อย"
-              imgPlaceholder={Img00324}
+              desc="ปรับความยาวสายรัดคางด้านข้างให้พอดี ไม่ตึงหรือหย่อนเกินไป"
+              imgPlaceholder={Img00323}
             />
+            <StepCard number="4" desc="ปรับความกระชับที่จานหมุนด้านหลัง จนแนบมั่นคงแต่ไม่อึดอัด" imgPlaceholder={Img00324} />
           </div>
           <div className="p-3 rounded-lg mb-6 bg-[#EFF6FF] text-[#23425D]">
             <strong>วิธีถอด:</strong> คลายจานหมุนด้านหลังเล็กน้อย → ปลดตัวล็อกปลดเร็วของสายรัดคาง → ถอดหมวกออกจากศีรษะอย่างระมัดระวัง
           </div>
 
-          {/* 3.3 Sizing/fit adjustment */}
-          <h4 className="text-xl font-semibold mt-6 mb-2 text-[#0360AE]">3.3 วิธีปรับขนาดให้พอดีกับผู้สวมใส่</h4>
+          {/* 3.2 Sizing/fit adjustment */}
+          <h4 className="text-xl font-semibold mt-6 mb-2 text-[#0360AE]">3.2 วิธีปรับขนาดให้พอดีกับผู้สวมใส่</h4>
           <div className="space-y-3 mb-4">
             <AdjustItem title="1. เลือกขนาดที่เหมาะสม" desc="เลือกขนาดหมวกให้เหมาะสมกับรอบศีรษะของผู้ใช้งาน (Size M หรือ Size L)" img={Img00331} />
             <AdjustItem
@@ -196,8 +177,8 @@ const Helmet00001Page = () => {
             desc="ไม่ควรถอดแผ่นรองหมวกออกทั้งหมดจนศีรษะแนบกับเปลือกหมวกโดยตรง เพราะอาจทำให้สวมใส่ไม่มั่นคง รู้สึกเจ็บ และลดประสิทธิภาพในการรองรับแรงกระแทก"
           />
 
-          {/* 3.4 Position check */}
-          <h4 className="text-xl font-semibold mt-6 mb-2 text-[#0360AE]">3.4 ตรวจสอบตำแหน่งก่อนใช้งาน</h4>
+          {/* 3.3 Position check */}
+          <h4 className="text-xl font-semibold mt-6 mb-2 text-[#0360AE]">3.3 ตรวจสอบตำแหน่งก่อนใช้งาน</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <div className="border rounded-lg p-3 text-center border-[#0360AE]">
               <div className="relative bg-gray-100 h-48 rounded flex items-center justify-center text-xs">
@@ -232,8 +213,8 @@ const Helmet00001Page = () => {
             </ul>
           </div>
 
-          {/* 3.5 Accessory mounting */}
-          <h4 className="text-xl font-semibold mt-6 mb-2 text-[#0360AE]">3.5 การติดตั้งอุปกรณ์เสริม</h4>
+          {/* 3.4 Accessory mounting */}
+          <h4 className="text-xl font-semibold mt-6 mb-2 text-[#0360AE]">3.4 การติดตั้งอุปกรณ์เสริม</h4>
           <p className="text-gray-700 mb-1">ติดตั้งเฉพาะอุปกรณ์ที่เหมาะกับรุ่น และล็อกแน่นก่อนใช้งาน</p>
           <p className="text-gray-700 mb-4">
             รางติดตั้งอุปกรณ์เหล่านี้อยู่บนรุ่น <strong>&ldquo;หมวกสนาม แบบ 2 พร้อมรางติดตั้งอุปกรณ์&rdquo;</strong> ตรวจสอบทุกครั้งก่อนนำออกใช้งาน
